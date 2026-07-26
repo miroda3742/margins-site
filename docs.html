@@ -86,23 +86,128 @@
 					</table>
 					<p>Saving fills in sensible dates automatically: date added is today, date started is today unless it's on your Want list, and if you mark it Read right away, the finish date and current page are set for you too. You can always adjust any of this later from the book's detail page.</p>
 					<h2 id="your-library">Your library</h2>
-					<p>Explain how a user adds a book (search, ISBN scan, or manual entry) and logs progress.</p>
+					<p>Four tabs sit along the bottom of the app, and you can swipe left and right between them:</p>
+					<ul>
+						<li><strong>Reading</strong> — books you've marked Reading, as cards with a progress bar (current page / total, and percentage), most recently started first.</li>
+						<li><strong>Shelf</strong> — finished books, shown as a grid of covers with the year you finished each one and your star rating, most recently finished first.</li>
+						<li><strong>Stats</strong> — see <a href="#stats">Stats &amp; reading goals</a> below.</li>
+						<li><strong>List</strong> — your "want to read" pile, as a simple list, most recently added first.</li>
+					</ul>
+					<p>Tap any book anywhere in the app to open its detail page.</p>
 					<h2 id="book-details">Book details</h2>
-					<p>Explain how page-linked notes work and how to search across them later.</p>
+					<p>This is where the actual day-to-day use happens. From here you can:</p>
+					<ul>
+						<li><strong>Log reading progress</strong> — while a book is marked Reading, a slider and quick +1 / −1 / +10 / −10 buttons let you update your current page in a couple of taps. There's also a Restart button if you want to reset back to page 0.</li>
+						<li><strong>Rate it</strong> — tap the stars for a rating out of 5, in half-star steps. Tap the same rating again to clear it.</li>
+						<li><strong>Change status</strong> — move a book between Want / Reading / Read at any time.</li>
+						<li><strong>Mark as finished</strong> — a one-tap shortcut (shown while Reading) that sets the status to Read, records today as the finish date, and logs your final page — with a confirmation prompt first.</li>
+						<li><strong>Edit dates, pages, and series</strong> — start/finish dates use the normal Android date picker.</li>
+						<li><strong>Write notes</strong> — a free-text field for your own thoughts.</li>
+						<li><strong>Save favorite quotes</strong> — a separate free-text field, kept apart from notes so the two don't get mixed together.</li>
+						<li><strong>Refetch cover &amp; details</strong> — if the book has an ISBN, this re-runs the online lookup to refresh the cover or fill in anything missing, using whatever source and region you've set in Settings.</li>
+						<li><strong>Change the cover</strong> — tap it to pick a different photo at any time.</li>
+						<li><strong>Remove the book</strong> — deletes it from your library, with a confirmation prompt ("this can't be undone").</li>
+					</ul>
+					<p>Once a book is marked Read, the progress slider is replaced with a simple "✓ Completed" line, so there's nothing left to accidentally bump out of place.</p>
 					<h2 id="stats">Statistics &amp; reading goals</h2>
-					<p>Explain how page-linked notes work and how to search across them later.</p>
+					<ul>
+						<li><strong>Yearly goal</strong> — set a target number of books for the calendar year; a progress ring shows how close you are, with a small celebration once you hit it. You can change your goal whenever you like.</li>
+						<li><strong>Totals</strong> — all-time books read, and books read this year.</li>
+						<li><strong>Reading activity</strong> — once you've logged some progress, you'll see total pages logged, days active, a GitHub-style heatmap of your daily reading over the last year, and a bar chart of pages read per week over the last 13 weeks.</li>
+						<li><strong>Read recently</strong> — a filterable list of finished books (last 3/6/12/24 months, all time, or by a specific year), with the total book and page count for whichever window you pick.</li>
+					</ul>
 					<h2 id="reminders">Reading reminders</h2>
-					<p>Explain what the reading-stats view shows: pace, streaks, yearly totals, genre breakdown, etc.</p>
+					<p>Turn this on in Settings and Margins checks in once a day, around <strong>7:00 PM</strong>. It only sends a notification if you have a book marked Reading <em>and</em> haven't logged any progress yet that day — otherwise it stays quiet. The message adapts to how long it's been:</p>
+					<ul>
+						<li>If you read yesterday: <em>"You read N pages yesterday. Can you read more today?"</em></li>
+						<li>If it's been longer: <em>"It's N days since you registered any reading. Read a book today!"</em></li>
+					</ul>
+					<p>On newer versions of Android, you'll be asked to allow notifications the first time you turn this on. Turning the toggle off cancels it entirely.</p>
 					<h2 id="appearance">Appearance &amp; themes</h2>
-					<p>Document the CSV/JSON export flow and what fields are included.</p>
+					<p>Four palettes are available, each with its own light and dark mode (the theme and the light/dark switch are independent, so you can pair any theme with either mode):</p>
+					<table>
+						<tr>
+							<th>Theme</th>
+							<th>Feel</th>
+						</tr>
+						<tr>
+							<td>Classic parchment</td>
+							<td>Warm paper, oxblood and gold — the original look.</td>
+						</tr>
+						<tr>
+							<td>Fjord</td>
+							<td>Glacier blue and brass, with a rune-inspired display font for titles.</td>
+						</tr>
+						<tr>
+							<td>Marginalia</td>
+							<td>Bone white with an editorial vermillion accent.</td>
+						</tr>
+						<tr>
+							<td>Field notes</td>
+							<td>Sage, ink, and terracotta — a botanical field-journal feel.</td>
+						</tr>
+					</table>
+					<p>Star ratings always stay gold, no matter which theme you're using.</p>
 					<h2 id="backup">Backup &amp; restore</h2>
-					<p>Explain how page-linked notes work and how to search across them later.</p>
+					<p>Everything lives on your device, so it's worth backing up from time to time — especially before switching phones.</p>
+					<ul>
+						<li><strong>Export library</strong> — saves a single JSON file with every book's full details (including your notes, quotes, ratings, and complete reading-progress history) and the covers themselves, so restoring on a new device brings your covers back too, not just links to them. Your Google Books API key is never included in an export, for your own security.</li>
+						<li><strong>Import from backup</strong> — merges a backup file into your current library: matching books are updated, new ones are added, and nothing already there is deleted.</li>
+						<li><strong>Replace entire library</strong> (in the danger zone) — wipes your current library completely, then imports the file you choose. Use this to restore a known-good backup from scratch. The order is: pick a file → Margins reads and checks it → only once that succeeds does it delete your current library and import the new one. A corrupted or unreadable file is rejected before anything is deleted, so it can't leave you with an empty library.</li>
+					</ul>
+					<div class="card warn">
+						<span class="label">Before you do a full replace</span>
+						<p>Once a valid file is loaded, this permanently deletes everything currently in the app before importing it — that part genuinely can't be undone. Export a current backup beforehand if you're at all unsure.</p>
+					</div>
 					<h2 id="lookup">How cover metadata works</h2>
-					<p>Explain what the reading-stats view shows: pace, streaks, yearly totals, genre breakdown, etc.</p>
+					<p>When you scan or type in an ISBN, Margins checks two free catalogs to fill in the title, author, page count, and cover: <strong>Open Library</strong> and <strong>Google Books</strong>. You can control this from <strong>Settings</strong>.</p>
+					<h3>Choosing a source</h3>
+					<p>The <strong>Cover &amp; metadata source</strong> dropdown picks which catalog is tried first. Whichever one you don't pick is still tried automatically if the first one comes back empty — so there's no separate "auto" option; that fallback always happens.</p>
+					<h3>Choosing a region</h3>
+					<p>Every ISBN encodes the country its edition was registered in — <em>except</em> for English-language books, where the same numbering is shared across the US, UK, Australia, Canada, and New Zealand, so it's genuinely ambiguous which cover to prefer. That's what the <strong>Google Books region</strong> dropdown is for: it only comes into play for English-language ISBNs, letting you choose which edition's cover you'd rather see. For every other language, the correct country is detected automatically from the ISBN itself, and this setting has no effect.</p>
+					<h3>Why a cover is sometimes missing rather than wrong</h3>
+					<p>Open Library occasionally only has a cover attached to a <em>different printing</em> of a book, not the specific edition your ISBN identifies. Margins deliberately does not use that mismatched cover — it would rather show no cover (which you can replace with your own photo) than a confidently wrong one. If that happens, try switching the source to Google Books in Settings and using "Refetch cover &amp; details" on the book's page, since Google's results are matched to your exact edition.</p>
 					<h2 id="google-key">Setting up a Google Books API key</h2>
-					<p>Document the CSV/JSON export flow and what fields are included.</p>
+					<p>Margins works out of the box with no setup — Open Library needs no key at all, and Google Books allows a small number of anonymous lookups shared across everyone using the app without one. That shared quota can run out or get temporarily flaky at busy times, though, so if you plan to add a lot of books, a free key of your own is worth the five minutes it takes.</p>
+					<ol class="steps">
+						<li>Go to <a href="https://console.cloud.google.com" target="_blank" rel="noopener">console.cloud.google.com</a> and create (or select) a project.</li>
+						<li>Open <strong>APIs &amp; Services → Library</strong>, search for <strong>"Books API"</strong>, and enable it.</li>
+						<li>Go to <strong>APIs &amp; Services → Credentials → Create credentials → API key</strong>. Copy the key it gives you.</li>
+						<li>Paste it into <strong>Settings → Google Books API key</strong> in Margins and tap <strong>Save</strong>.</li>
+						<li>Tap <strong>Test key</strong> right below the field — it looks up a fixed, well-known book to confirm the key actually works, and tells you plainly if something's wrong, rather than leaving you to guess from whether a lookup happened to succeed.</li>
+					</ol>
+					<h3>Restricting your key (recommended)</h3>
+					<p>An unrestricted API key will work for anyone who gets hold of it, so Google lets you lock it to a specific app. You don't need Android Studio, a computer, or any developer tools for this — just two values, both fixed for every copy of Margins downloaded from the Play Store:</p>
+					<table>
+						<tr>
+							<th>Package name</th>
+							<td><code>com.miroda.margins</code></td>
+						</tr>
+						<tr>
+							<th>SHA-1 fingerprint</th>
+							<td><code>REPLACE_WITH_PLAY_SIGNING_SHA1</code></td>
+						</tr>
+					</table>
+					<p>Every phone that installs Margins from the Play Store gets the exact same signed app, so this SHA-1 is the same for you as it is for every other reader of this page — just copy it in.</p>
+					<ol class="steps">
+						<li>In the Cloud Console, open your key's settings and set <strong>Application restrictions</strong> to <strong>Android apps</strong>.</li>
+						<li>Click <strong>Add package name and fingerprint</strong>.</li>
+						<li>Enter the package name and SHA-1 fingerprint from the table above.</li>
+						<li>Save.</li>
+					</ol>
 					<h2 id="troubleshooting">Troubleshooting &amp; FAQ</h2>
-					<p>Document the CSV/JSON export flow and what fields are included.</p>
+					<h3>The wrong cover shows up</h3>
+					<p>See <a href="#lookup">how lookup works</a> above — for English-language books, try setting your Google Books region to match the edition you own. If a cover still looks wrong, tap the cover on the book's detail page and replace it with your own photo; that always takes priority.</p>
+					<h3>No cover appears at all</h3>
+					<p>Some editions simply don't have a cover uploaded to either catalog. Margins would rather leave it blank than guess with a mismatched one — replace it with a photo of your own copy from the book's detail page.</p>
+					<h3>My Google Books key isn't working</h3>
+					<p>Use the <strong>Test key</strong> button in Settings — it shows Google's actual error message rather than a generic failure, which usually tells you exactly what's wrong: an invalid key, the Books API not being enabled on your project, or (if you've restricted it) trying to test it somewhere other than the real app.</p>
+					<h3>A lookup found nothing</h3>
+					<p>Some books, especially small-press or self-published titles, aren't listed in either catalog. Use <strong>Add it manually</strong> from the lookup screen.</p>
+					<h3>Reminders aren't showing up</h3>
+					<p>Check that notification permission is granted to Margins in your phone's system settings, and that you don't already have a book logged for the day — the reminder deliberately stays silent once you've logged progress.</p>
+					<h3>Moving to a new phone</h3>
+					<p>Export a backup on your old device, install Margins on the new one, and use <strong>Import from backup</strong> (or <strong>Replace entire library</strong> if it's a brand-new install). Covers are embedded in the backup file itself, so they'll come across too.</p>
 				</div>
 			</div>
 		</section>
