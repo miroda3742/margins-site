@@ -1,65 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Documentation — Margins</title>
-<link rel="stylesheet" href="css/style.css">
-<style>:root{--accent:#8a3b3b;--accent-dark:#6b2d2d;}</style>
-</head>
-<body>
 
-<header class="site-nav">
-  <div class="wrap">
-    <a class="brand" href="./"><span class="dot"></span>Margins</a>
-    <nav class="links">
-      <a href="./">Overview</a>
-      <a href="docs.html" class="active">Documentation</a>
-      <a href="https://yourdomain.com">All apps</a>
-    </nav>
-  </div>
-</header>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Documentation — Margins</title>
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			:root {
+				--accent: #8a3b3b;
+				--accent-dark: #6b2d2d;
+			}
 
-<section>
-  <div class="wrap docs-layout">
-    <aside class="docs-toc">
-      <a href="#getting-started">Getting started</a>
-      <a href="#logging-books">Logging books</a>
-      <a href="#notes">Notes &amp; highlights</a>
-      <a href="#stats">Stats</a>
-      <a href="#export">Exporting your data</a>
-      <a href="#faq">FAQ</a>
-    </aside>
+		</style>
+	</head>
 
-    <div class="docs-content">
-      <h2 id="getting-started">Getting started</h2>
-      <p>Replace this with real onboarding instructions: how to create a library, import books, and set reading goals.</p>
+	<body>
+		<header class="site-nav">
+			<div class="wrap">
+				<a class="brand" href="./"><span class="dot"></span>Margins</a>
+				<nav class="links">
+					<a href="./">Overview</a>
+					<a href="docs.html" class="active">Documentation</a>
+					<a href="https://yourdomain.com">All apps</a>
+				</nav>
+			</div>
+		</header>
+		<section>
+			<div class="wrap docs-layout">
+				<aside class="docs-toc">
+					<a href="#adding-a-book">Adding a book</a></li>
+					<a href="#your-library">Your library</a>
+					<a href="#book-details">A book's detail page</a>
+					<a href="#stats">Stats &amp; reading goals</a>
+					<a href="#reminders">Reading reminders</a>
+					<a href="#appearance">Appearance &amp; themes</a>
+					<a href="#backup">Backup &amp; restore</a>
+					<a href="#lookup">How cover &amp; metadata lookup works</a>
+					<a href="#google-key">Setting up a Google Books API key</a>
+					<a href="#troubleshooting">Troubleshooting &amp; FAQ</a>
+				</aside>
+				<div class="docs-content">
+					<h2 id="adding-a-book">Adding a book</h2>
+					<p>Tap the <strong>+</strong> button at the bottom of the screen. You have three ways to add a book:</p>
+					<ul>
+						<li><strong>Scan barcode</strong> — point your camera at the barcode on the back of the book. Margins reads the ISBN automatically the moment it's in frame; there's nothing to confirm. You'll need to grant camera permission the first time.</li>
+						<li><strong>Look up by ISBN</strong> — type the ISBN in yourself (handy if the barcode is damaged or you're adding from a listing online) and tap Find.</li>
+						<li><strong>Add manually</strong> — skip lookup entirely and fill in the details yourself. Good for books that aren't in either online catalog, proofs, or anything without a barcode.</li>
+					</ul>
+					<div class="card tip">
+						<span class="label">Tip</span>
+						<p>Scanning and ISBN lookup both need an internet connection, since they fetch the title, author, page count, and cover from Open Library or Google Books. If the lookup can't find a match, you're offered an <strong>Add it manually</strong> button instead of being stuck.</p>
+					</div>
+					<h3>The book entry form</h3>
+					<p>Whichever route you take, you land on the same form to confirm or fill in:</p>
+					<table>
+						<tr>
+							<th>Field</th>
+							<th>Notes</th>
+						</tr>
+						<tr>
+							<td>Cover</td>
+							<td>Tap it to replace with a photo from your device. Any cover found online is downloaded and stored on your device, so it won't disappear later if the source changes.</td>
+						</tr>
+						<tr>
+							<td>Title</td>
+							<td>Required.</td>
+						</tr>
+						<tr>
+							<td>Author</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Series</td>
+							<td>Optional.</td>
+						</tr>
+						<tr>
+							<td>Total pages</td>
+							<td>&nbsp;</td>
+						</tr>
+						<tr>
+							<td>Status</td>
+							<td><strong>Want</strong> / <strong>Reading</strong> / <strong>Read</strong> — a three-way toggle.</td>
+						</tr>
+					</table>
+					<p>Saving fills in sensible dates automatically: date added is today, date started is today unless it's on your Want list, and if you mark it Read right away, the finish date and current page are set for you too. You can always adjust any of this later from the book's detail page.</p>
+					<h2 id="your-library">Your library</h2>
+					<p>Explain how a user adds a book (search, ISBN scan, or manual entry) and logs progress.</p>
+					<h2 id="book-details">Book details</h2>
+					<p>Explain how page-linked notes work and how to search across them later.</p>
+					<h2 id="stats">Statistics &amp; reading goals</h2>
+					<p>Explain how page-linked notes work and how to search across them later.</p>
+					<h2 id="reminders">Reading reminders</h2>
+					<p>Explain what the reading-stats view shows: pace, streaks, yearly totals, genre breakdown, etc.</p>
+					<h2 id="appearance">Appearance &amp; themes</h2>
+					<p>Document the CSV/JSON export flow and what fields are included.</p>
+					<h2 id="backup">Backup &amp; restore</h2>
+					<p>Explain how page-linked notes work and how to search across them later.</p>
+					<h2 id="lookup">How cover metadata works</h2>
+					<p>Explain what the reading-stats view shows: pace, streaks, yearly totals, genre breakdown, etc.</p>
+					<h2 id="google-key">Setting up a Google Books API key</h2>
+					<p>Document the CSV/JSON export flow and what fields are included.</p>
+					<h2 id="troubleshooting">Troubleshooting &amp; FAQ</h2>
+					<p>Document the CSV/JSON export flow and what fields are included.</p>
+				</div>
+			</div>
+		</section>
+		<footer class="site-footer">
+			<div class="wrap">
+				<span>© 2026 Margins, part of Yourbrand.</span>
+				<span><a href="https://yourdomain.com">yourdomain.com</a></span>
+			</div>
+		</footer>
+	</body>
 
-      <h2 id="logging-books">Logging books</h2>
-      <p>Explain how a user adds a book (search, ISBN scan, or manual entry) and logs progress.</p>
-
-      <h2 id="notes">Notes &amp; highlights</h2>
-      <p>Explain how page-linked notes work and how to search across them later.</p>
-
-      <h2 id="stats">Stats</h2>
-      <p>Explain what the reading-stats view shows: pace, streaks, yearly totals, genre breakdown, etc.</p>
-
-      <h2 id="export">Exporting your data</h2>
-      <p>Document the CSV/JSON export flow and what fields are included.</p>
-
-      <h2 id="faq">FAQ</h2>
-      <p><strong>Does Margins work offline?</strong> Answer here.</p>
-      <p><strong>Can I import from Goodreads?</strong> Answer here.</p>
-    </div>
-  </div>
-</section>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <span>© 2026 Margins, part of Yourbrand.</span>
-    <span><a href="https://yourdomain.com">yourdomain.com</a></span>
-  </div>
-</footer>
-
-</body>
 </html>
