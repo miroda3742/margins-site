@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Privacy Policy — Margins</title>
+		<meta name="description" content="Privacy policy for Margins, the book logging app.">
+		<link rel="stylesheet" href="css/style.css">
+		<style>
+			:root {
+				--accent: #8a3b3b;
+				--accent-dark: #6b2d2d;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<header class="site-nav">
+			<div class="wrap">
+				<a class="brand" href="./"><span class="dot"></span>Margins</a>
+				<button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+					<svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+						<line x1="2" y1="5" x2="20" y2="5" />
+						<line x1="2" y1="11" x2="20" y2="11" />
+						<line x1="2" y1="17" x2="20" y2="17" />
+					</svg>
+				</button>
+				<nav class="links">
+					<a href="./">Overview</a>
+					<a href="docs.html">Documentation</a>
+					<a href="privacy.html" class="active">Privacy</a>
+					<a href="https://yourdomain.com">All apps</a>
+				</nav>
+			</div>
+		</header>
+		<section>
+			<h1>Privacy Policy for In the Margins</h1>
+			<p class="updated">Last updated: July 27, 2026</p>
+			<p>In the Margins ("the app") is a personal reading tracker developed by miroda. This policy explains what data the app accesses and how it's used.</p>
+			<h2>Data storage</h2>
+			<p>All of your library data — books, ratings, notes, quotes, reading logs, and settings — is stored locally on your device using a local database. It is not uploaded to any server operated by us, and we do not have access to it.</p>
+			<h2>Backup and export</h2>
+			<p>The app lets you export your library to a backup file on your own device, and import it back later. This file is created and controlled entirely by you; we never receive a copy of it.</p>
+			<h2>Network access</h2>
+			<p>When you scan or search for a book by ISBN or title, the app sends that lookup (the ISBN or search text) to third-party book metadata providers — Open Library and/or the Google Books API — in order to retrieve the book's title, author, cover image, and page count. These providers may log requests according to their own privacy policies:</p>
+			<ul>
+				<li>Open Library: <a href="https://openlibrary.org/privacy">openlibrary.org/privacy</a></li>
+				<li>Google Books API: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+			</ul>
+			<p>If you add your own Google Books API key in Settings, that key is stored locally on your device and used only to authenticate your own lookup requests. It is never included in exported backup files.</p>
+			<h2>Camera</h2>
+			<p>The app requests camera access solely to scan book barcodes (ISBNs) using on-device barcode recognition. No images or video are stored, transmitted, or retained — the camera feed is processed in real time and discarded.</p>
+			<h2>Notifications</h2>
+			<p>If you enable daily reading reminders, these are scheduled and delivered entirely on your device. No reminder data is sent anywhere.</p>
+			<h2>What we don't do</h2>
+			<ul>
+				<li>No account or sign-in is required or offered.</li>
+				<li>No analytics or crash-reporting SDKs are integrated.</li>
+				<li>No advertising or ad tracking.</li>
+				<li>We do not sell or share your data, because we never receive it in the first place.</li>
+			</ul>
+			<h2>Changes to this policy</h2>
+			<p>If this policy changes, the update will be posted at this same URL with a revised date above.</p>
+			<h2>Contact</h2>
+			<p>Questions about this policy or the app can be sent via the developer's Ko-fi page: <a href="https://ko-fi.com/miroda">ko-fi.com/miroda</a>.</p>
+		</section>
+		<footer class="site-footer">
+			<div class="wrap">
+				<span>© 2026 Margins, part of Yourbrand.</span>
+				<span><a href="https://yourdomain.com">yourdomain.com</a></span>
+			</div>
+		</footer>
+		<script src="js/nav.js" defer></script>
+	</body>
+
+</html>
