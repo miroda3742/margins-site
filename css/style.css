@@ -241,6 +241,25 @@ p.section-sub {
   text-align: center;
   padding: 12px;
 }
+.screenshot {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.screenshot img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.screenshot figcaption {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
 
 /* ---------- Docs page ---------- */
 .docs-layout {
