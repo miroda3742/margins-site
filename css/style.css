@@ -40,6 +40,12 @@ img { max-width: 100%; display: block; }
       align-items: center;     /* Centers vertically */
     }
 
+.google-container {
+      display: flex;
+      justify-content: left; /* Centers horizontally */
+      align-items: left;     /* Centers vertically */
+    }
+
 .wrap {
   max-width: var(--max-width);
   margin: 0 auto;
